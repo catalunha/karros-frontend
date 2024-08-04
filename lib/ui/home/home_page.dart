@@ -17,7 +17,7 @@ class HomePage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Karros - Seja bem vindo a nosso App.',
+          'Karros - Anuncie seu carro em nosso aplicativo.',
         ),
         actions: [
           IconButton(

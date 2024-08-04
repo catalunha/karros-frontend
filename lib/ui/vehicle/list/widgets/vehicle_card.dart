@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../../../../domain/models/vehicle.dart';
 import '../../../shared/app_view_image.dart';
 
@@ -15,12 +17,15 @@ class VehicleCardWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: SizedBox(
           width: 300,
+          height: 350,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppViewImage(
-                imageUrl: item.image,
+              Center(
+                child: AppViewImage(
+                  imageUrl: item.image,
+                ),
               ),
               Text(
                 '${item.model!.brand!.name} - ${item.model!.name}',
@@ -33,6 +38,17 @@ class VehicleCardWidget extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               Text(item.id!.substring(0, 8)),
+              IconButton(
+                onPressed: () async {
+                  final uri = Uri.parse(
+                    'https://api.whatsapp.com/send?phone=${item.user?.phone}',
+                  );
+                  if (await canLaunchUrl(uri)) {
+                    await launchUrl(uri);
+                  }
+                },
+                icon: const Icon(Icons.call),
+              ),
             ],
           ),
         ),
