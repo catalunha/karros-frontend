@@ -84504,7 +84504,7 @@ s($,"aWl","aDm",()=>A.bs("(?:"+$.aCw().a+")*",!0,!1,!1))
 s($,"aRr","aAm",()=>new A.r())
 s($,"aW9","aDe",()=>{var q=null
 return new A.vW(A.aPU(),q,q,q,"routerConfigProvider",q,q,A.aq("vW<kv>"))})
-s($,"aQA","asy",()=>"https://fluxus-api.proclinicakids.com.br")
+s($,"aQA","asy",()=>"https://karros-backend-ofcah.ondigitalocean.app")
 s($,"aVW","at_",()=>A.t7(A.aPL(),null,null,null,"dioClientProvider",t.ep))
 s($,"aVL","aD5",()=>A.t7(A.aPJ(),null,null,null,"authRestProvider",t.JR))
 s($,"aWi","aDk",()=>A.t7(A.aPK(),null,null,null,"vehicleRestProvider",t.Cz))
