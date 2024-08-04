@@ -12,7 +12,7 @@ final class DioClient extends DioForNative {
   DioClient()
       : super(
           BaseOptions(
-            baseUrl: ApiUrl.baseurl,
+            baseUrl: ApiConfig.baseurl,
             connectTimeout: const Duration(seconds: 10),
             receiveTimeout: const Duration(seconds: 60),
           ),
@@ -32,7 +32,7 @@ final class DioClient extends DioForNative {
             try {
               final TokenStorage tokenStorage = GetIt.instance.get();
               final token = tokenStorage.getAccess();
-              options.headers["Authorization"] = "Bearer $token";
+              options.headers['Authorization'] = 'Bearer $token';
             } catch (e) {
               // no op
             }
@@ -44,12 +44,14 @@ final class DioClient extends DioForNative {
                 final TokenStorage tokenStorage = GetIt.instance.get();
                 final token = tokenStorage.getRefresh();
 
-                final response = await unauth
-                    .post("${ApiUrl.baseurl}/auth/token/refresh/", data: {
-                  "refresh": token,
-                });
+                final response = await unauth.post(
+                  '${ApiConfig.baseurl}/auth/token/refresh/',
+                  data: {
+                    'refresh': token,
+                  },
+                );
 
-                final String newAccessToken = response.data["access"];
+                final String newAccessToken = response.data['access'];
                 tokenStorage.setAccess(newAccessToken);
 
                 error.requestOptions.headers['Authorization'] =

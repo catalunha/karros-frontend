@@ -46,7 +46,7 @@ class _AppState extends ConsumerState<App> {
     final routerConfig = ref.watch(routerConfigProvider);
 
     return MaterialApp.router(
-      title: 'Corti',
+      title: 'Karros',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

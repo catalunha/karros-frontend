@@ -20,5 +20,19 @@ final authRestProvider = Provider<AuthRest>.internal(
 );
 
 typedef AuthRestRef = ProviderRef<AuthRest>;
+String _$vehicleRestHash() => r'79949c5f4794a466ed02d447c91ace4f0e85d0b8';
+
+/// See also [vehicleRest].
+@ProviderFor(vehicleRest)
+final vehicleRestProvider = Provider<VehicleRest>.internal(
+  vehicleRest,
+  name: r'vehicleRestProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$vehicleRestHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef VehicleRestRef = ProviderRef<VehicleRest>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

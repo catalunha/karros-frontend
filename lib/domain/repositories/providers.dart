@@ -4,6 +4,7 @@ import '../../data/rest/providers.dart';
 
 import 'auth/auth_repository.dart';
 import 'auth/auth_repository_impl.dart';
+import 'vehicle/vehicle_respository.dart';
 
 part 'providers.g.dart';
 
@@ -12,7 +13,7 @@ AuthRepository authRepository(AuthRepositoryRef ref) {
   return AuthRepositoryImpl(rest: ref.read(authRestProvider));
 }
 
-// @Riverpod(keepAlive: true)
-// VideoRepository videoRepository(VideoRepositoryRef ref) {
-//   return VideoRepositoryImpl(rest: ref.read(videoRestProvider));
-// }
+@Riverpod(keepAlive: true)
+VehicleRepository vehicleRepository(VehicleRepositoryRef ref) {
+  return VehicleRepository(vehicleRest: ref.read(vehicleRestProvider));
+}

@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
-  "dev_mode": true,
+  "version": "0.0.2",
+  "dev_mode": false,
   "url_api_dev": "http://192.168.10.117:8000",
   "url_api_prod": "https://fluxus-api.proclinicakids.com.br"
 }
