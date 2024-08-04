@@ -24,3 +24,6 @@ flutter pub add dev:freezed
 flutter pub add dev:json_serializable
 flutter pub add dev:retrofit_generator
 flutter pub add dev:analyzer
+
+
+catalunha@pop-os:~/apps/karros-frontend$ git rm -r --cached .
