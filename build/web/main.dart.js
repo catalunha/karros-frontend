@@ -25570,7 +25570,7 @@ p.Rx(q,t.cZ)
 p.Rx(new A.l7(q),t.lC)
 return A.I(null,r)}})
 return A.J($async$anT,r)},
-aGg(){return"http://192.168.10.117:8000"},
+aGg(){return"https://karros-backend-ofcah.ondigitalocean.app"},
 aOV(a){return A.aFy()},
 aO8(a){return new A.Nz(a.fq(0,$.atg(),t.kE))},
 aQN(a){return new A.UT(a.fq(0,$.atg(),t.ep))},
@@ -75939,14 +75939,14 @@ O0(a,b){var s,r=null,q=$.apl()
 b.Fv(new A.D0(q,new A.a3f(),q.$ti.h("D0<cV.0,B4?>")),t.w9)
 q=t.E
 s=A.atF(A.b([A.a3w(r,B.Cu,new A.a3g(),r,r)],q),B.PR)
-return A.awP(s,A.nM(A.b([A.i2("Vers\xe3o D-0.0.2",r,r,r,B.fy),B.C5],q),B.b3,B.c1,B.c2))}}
+return A.awP(s,A.nM(A.b([A.i2("Vers\xe3o P-0.0.3",r,r,r,B.fy),B.C5],q),B.b3,B.c1,B.c2))}}
 A.a3f.prototype={
 $1(a){return a.d},
 $S:495}
 A.a3g.prototype={
 $0(){var s=0,r=A.K(t.H),q
 var $async$$0=A.L(function(a,b){if(a===1)return A.H(b,r)
-while(true)switch(s){case 0:q=A.cj("http://192.168.10.117:8000/admin/login/",0,null)
+while(true)switch(s){case 0:q=A.cj("https://karros-backend-ofcah.ondigitalocean.app/admin/login/",0,null)
 s=4
 return A.R(A.anZ(q),$async$$0)
 case 4:s=b?2:3
