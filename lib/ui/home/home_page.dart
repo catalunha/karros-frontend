@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/env.dart';
 import '../shared/controller/auth/providers.dart';
@@ -15,7 +16,20 @@ class HomePage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Karros - ${profile?.email ?? 'Visitante'}'),
+        title: const Text(
+          'Karros - Seja bem vindo a nosso App.',
+        ),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              final uri = Uri.parse('${Env.api}/admin/login/');
+              if (await canLaunchUrl(uri)) {
+                await launchUrl(uri);
+              }
+            },
+            icon: const Icon(Icons.settings),
+          ),
+        ],
       ),
       body: Column(
         children: [
