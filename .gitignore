@@ -41,3 +41,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#############################
+# +++ catalunha exclude files
+.VSCodeCounter
+
+/build/*
+!build/web
+
+# --- catalunha exclude files
+#############################
