@@ -36,7 +36,7 @@ class HomePage extends ConsumerWidget {
           // Text('Futuros filtros'),
           Text(
             textAlign: TextAlign.center,
-            'Versão ${Env.developmentMode ? "D" : "P"}-${Env.version}',
+            'App versão ${Env.developmentMode ? "D" : "P"}-${Env.version}',
           ),
           const Flexible(
             child: SingleChildScrollView(
