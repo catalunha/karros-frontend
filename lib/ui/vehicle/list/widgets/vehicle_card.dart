@@ -37,17 +37,23 @@ class VehicleCardWidget extends StatelessWidget {
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
-              Text(item.id!.substring(0, 8)),
-              IconButton(
-                onPressed: () async {
-                  final uri = Uri.parse(
-                    'https://api.whatsapp.com/send?phone=${item.user?.phone}',
-                  );
-                  if (await canLaunchUrl(uri)) {
-                    await launchUrl(uri);
-                  }
-                },
-                icon: const Icon(Icons.call),
+              Row(
+                children: [
+                  // Text(item.id!.substring(0, 3)),
+                  Text('Vendedor: ${item.user?.firstName}'),
+                  IconButton(
+                    onPressed: () async {
+                      final uri = Uri.parse(
+                        // 'https://wa.me/55${item.user?.phone}?text=Ola',
+                        'https://api.whatsapp.com/send?phone=${item.user?.phone}&text=Karros...',
+                      );
+                      if (await canLaunchUrl(uri)) {
+                        await launchUrl(uri);
+                      }
+                    },
+                    icon: const Icon(Icons.call),
+                  ),
+                ],
               ),
             ],
           ),
